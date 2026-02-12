@@ -1,0 +1,13 @@
+{
+  "name": "AI Auto Panel",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postCreateCommand": "pip install flask requests python-dotenv gunicorn markdown",
+  "forwardPorts": [5000],
+  "portsAttributes": {
+    "5000": {
+      "label": "AI Panel",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postStartCommand": "python app.py"
+}
